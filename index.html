@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Siddharth Mistry Portfolio">
+	<meta name="author" content="Siddharth Mistry">
+	<title>Siddharth Mistry Portfolio</title>
+	<!-- icon in page title -->
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon.ico">
+	<!-- fontawesome icons -->
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+	<!-- CSS files -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+</head>
+
+<body>
+	<!-- Header of the page: Contains navigation links to Porfolio homepage, About, projects and contact info -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+          		</button>
+          		<a class="navbar-brand" href="#" >
+          			<span><img src="img/smlogo-3-20.png" alt="logo"></span> Siddharth Mistry
+          		</a>
+			</div>
+			<div class="navbar-collapse collapse" id="mynavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#about">About</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div>	
+		</div>
+	</nav>	
+	
+	<!-- Main body of the page: Contains brief description about me, link to About.me profile and contact info -->
+	<section class="container" id="about">
+		<h2 class="row text-center">About</h2>
+		<div class="col-md-7">
+			<p>Siddharth Mistry based in San Jose, California is a student at Udacity in their front-end development Nanodegree program.</p>
+			<p>His goal is to master the skills in front-end development to create responsive, dynamic and beautiful websites.</p>
+			<p>He is also a telecom engineer and has more than 3 years of RF Engineering experience in LTE RF network design and optimization.</p>
+			<p>If you would like to know more, please <a href="https://about.me/siddharthmistry" target="_blank">click here</a>.</p>
+		</div>
+		<ul class="social-media-top col-md-5 list-unstyled text-right">
+			<li class="email">mistry.siddharth@gmail.com</li>
+			<li><a href="https://www.linkedin.com/in/siddharth-mistry-7a660419" target="_blank">LinkedIn</a></li>
+			<li><a href="https://github.com/mistry-siddharth" target="_blank">GitHub</a></li>
+		</ul>
+	</section>
+
+	<!-- Project Section: Contains individual projects with modals -->
+	<section class="container" id="projects">
+		<h2 class="row text-center">What I've Been Upto</h2>
+		<div class="work-item project1 col-md-4">
+			<a href="#" data-toggle="modal" data-target=".project-1-modal" class="nohighlight">
+				<figure class="ind-projects">
+					<img class="ind-projects img-responsive" src="img/256-resized/portfolio-256_2x.png" alt="Project 1: Online Portfolio">
+					<figcaption class="text-center">Online Portfolio</figcaption>
+				</figure>
+			</a>
+		</div>
+		<div class="work-item project2 col-md-4">
+			<a href="#" data-toggle="modal" data-target=".project-2-modal" class="nohighlight">
+				<figure class="ind-projects">
+					<img class="ind-projects img-responsive" src="img/256-resized/twitter-bot-256_2x.png" alt="Project 2: Twitter Automated Response Bot">
+					<figcaption class="text-center">Twitter Automated Response Bot</figcaption>
+				</figure>
+			</a>
+		</div>
+		<div class="work-item project3 col-md-4">
+			<a href="#" data-toggle="modal" data-target=".project-3-modal" class="nohighlight">
+				<figure class="ind-projects">
+					<img class="ind-projects img-responsive" src="img/256-resized/bird-256_2x.png" alt="Project 3: Flappy Bird Clone">
+					<figcaption class="text-center">Flappy Bird Clone</figcaption>
+				</figure>
+			</a>
+		</div>
+		<div class="work-item project4 col-md-6">
+			<a href="#" data-toggle="modal" data-target=".project-4-modal" class="nohighlight">
+				<figure class="ind-projects">
+					<img class="ind-projects img-responsive" src="img/256-resized/resume-256_2x.png" alt="Project 4: Interactive Resume">
+					<figcaption class="text-center">Interactive Resume</figcaption>
+				</figure>
+			</a>
+		</div>
+		<div class="work-item project5 col-md-6">
+			<a href="#" data-toggle="modal" data-target=".project-5-modal" class="nohighlight">
+				<figure class="ind-projects">
+					<img class="ind-projects img-responsive" src="img/256-resized/game-256_2x.png" alt="Arcade Game">
+					<figcaption class="text-center">Arcade Game</figcaption>
+				</figure>
+			</a>
+		</div>
+	</section>
+
+	<!-- Contact Section: Contains social-media and contact form -->
+	<section class="container" id="contact">
+		<h2 class="row text-center">Contact</h2>
+		<div class="col-md-7 form">
+			<h3>Send me a message</h3>
+	        <form method="POST" class="form-horizontal" action="https://formspree.io/mistry.siddharth@gmail.com">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <input type="email" class="form-control" name="email" placeholder="Your email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12">
+		                <textarea type="text" class="form-control" name="message" placeholder="Your message..." rows="6"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12">
+                		<button type="submit" class="btn btn-default pull-right">Send</button>
+                   	</div>
+                </div>
+        	</form>
+	    </div>
+	    <section class="col-md-5">
+	    	<h3 class="contact-details">Contact Details</h3>
+	    	<ul class="list-unstyled text-left">
+				<li class="social-media-bottom email">
+					<span><i class="fa fa-envelope fa-1.5x" aria-hidden="true"></i> mistry.siddharth@gmail.com</span> 
+				</li>
+				<li class="social-media-bottom linkedin">
+					<a href="https://www.linkedin.com/in/siddharth-mistry-7a660419" target="_blank">
+					<i class="fa fa-linkedin-square fa-1.5x" aria-hidden="true"></i> LinkedIn
+					</a>
+				</li>
+				<li class="social-media-bottom github">
+					<a href="https://github.com/mistry-siddharth" target="_blank">
+					<i class="fa fa-github-square fa-1.5x" aria-hidden="true"></i> GitHub
+					</a>
+				</li>
+			</ul>
+	    </section>
+	</section>
+
+	<!-- footer of the page contains contact info and credits -->
+	<footer class="container">
+		<div class="footer-inner">
+			<aside class="text-center">
+				© Siddharth Mistry 2016
+			</aside>
+			<aside class="copyright text-center">
+				<p>Icons made by Maxim Basinski from www.flaticon.com is licensed by CC 3.0 BY</p>
+			</aside>
+			<ul class="list-unstyled text-center">
+				<li class="social-media-footer email">
+					<span><i class="fa fa-envelope fa-1.5x" aria-hidden="true"></i> mistry.siddharth@gmail.com</span>
+				</li>
+				<li class="social-media-footer linkedin">
+					<a href="https://www.linkedin.com/in/siddharth-mistry-7a660419" target="_blank">
+					<i class="fa fa-linkedin-square fa-1.5x" aria-hidden="true"></i> LinkedIn
+					</a>
+				</li>
+				<li class="social-media-footer github">
+					<a href="https://github.com/mistry-siddharth" target="_blank">
+					<i class="fa fa-github-square fa-1.5x" aria-hidden="true"></i> GitHub
+					</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	
+	<!-- Modals -->
+	<!-- Modal Project 1: Online Portfolio -->
+	<div class="modal fade project-1-modal" tabindex="-1" role="dialog" aria-labelledby="project-1-modal">
+	  	<div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+	                <h4 class="modal-title" id="project-1-modal">Online Portfolio</h4>
+	            </div>
+	            <div class="modal-box col-md-12 modal-body">
+                    <p>Designed an online portfolio as part of project course-work for Udacity's Nanodegree program.</p>
+                    <p>The goal of the project was to replicate a design mockup using HTML, CSS and JavaScript, to create a responsive website that works across different medias.</p>
+                    <p>Different tools were used along-with HTML, CSS and JavaScript. Grunt was used to make the task of changing the resolution of the images and minifying CSS files. Git was used for version control for the code and Github is used to host my website.</p>
+	            </div>
+	            <div class="modal-footer">
+                    <div class="col-md-12">
+                    	<a class="button link-github btn btn-default" href="https://github.com/mistry-siddharth/mistry-siddharth.github.io" target="_blank">Link to Github</a>
+                        <button type="button" class="close-btn btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+	            </div>
+	        </div>
+	  	</div>
+    </div>
+
+	<!-- Modal Project 2: Twitter Automated Response Bot -->
+	<div class="modal fade project-2-modal" tabindex="-1" role="dialog" aria-labelledby="project-2-modal">
+	  	<div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+	                <h4 class="modal-title" id="project-2-modal">Twitter Automated Response Bot</h4>
+	            </div>
+	            <div class="modal-box col-md-12 modal-body">
+                    <p>The bot was developed in Python and works on the concept of information dissemination. It finds people who tweet about facts that happened at a day and then send them more facts. These facts are extracted from Wikipedia. Essentially there are 3 main modules that work here.</p>
+                    <p>Using a 'Tweet Listening' module one can listen to multiple #hashtags, particular keywords, tweets from a certain user or even tweets based on certain locations. This module can itself be useful to just listen to a stream based on certain filters and can help in capturing real-time tweets.</p> 
+                    <p>The second module supports easy tweet parsing and sub-filters which allows further filtering of the tweet data. One can define internal function which can help in further enhancing module functionality.</p>
+                    <p>The final module helps in replying where one can reply using the direct @tweet option or reply by emailing the results back to a person. An internal module in the reply module is the Text-to-Image convertor module which helps in converting the text data to image (it wraps if it has multiple lines) thereby making it easier to tweet out messages that are more than 140 characters by sending an image as a reply.</p>
+	            </div>
+	            <div class="modal-footer">
+                    <div class="col-md-12">
+                    	<a class="link-github btn btn-default" href="https://github.com/mistry-siddharth/Twitter_Automated_Reply_Bot" target="_blank">Link to Github</a>
+                        <button type="button" class="close-btn btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+	            </div>
+	        </div>
+	  	</div>
+    </div>
+
+    <!-- Modal Project 3: Flappy Bird Game Clone -->
+	<div class="modal fade project-3-modal" tabindex="-1" role="dialog" aria-labelledby="project-3-modal">
+	  	<div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+	                <h4 class="modal-title" id="project-3-modal">Flappy Bird Game Clone</h4>
+	            </div>
+	            <div class="modal-box col-md-12 modal-body">
+                    <p>Developed clone of one of the most famous mobile games of modern times; Flappy Bird! Pygame module of Python was used in implementing the game to render graphics. Game was developed with increasing difficulty as the game progresses, keeping the score in count and displaying appropriate text on the screen for different events in the game.</p>
+	            </div>
+	            <div class="modal-footer">
+                    <div class="col-md-12">
+                    	<a class="link-github btn btn-default" href="https://github.com/mistry-siddharth/Flappy_Bird_Clone" target="_blank">Link to Github</a>
+                        <button type="button" class="close-btn btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+	            </div>
+	        </div>
+	  	</div>
+    </div>
+
+    <!-- Modal Project 4: Online Interactive Resume -->
+	<div class="modal fade project-4-modal" tabindex="-1" role="dialog" aria-labelledby="project-4-modal">
+	  	<div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+	                <h4 class="modal-title" id="project-4-modal">Online Interactive Resume</h4>
+	            </div>
+	            <div class="modal-box col-md-12 modal-body">
+                    <p>Developing an online resume as part of the Udacity Front-End Development Nanodegree program.</p>
+					<p>In this project, the goal is to transform static web pages into dynamic applications using HYML, CSS, JavaScript and jQuery. Concepts of data structures, conditional statements, loops, and functions in JavaScript as well as the core features of jQuery will be used to manipulate the DOM.</p>
+	            </div>
+	            <div class="modal-footer">
+                    <div class="col-md-12">
+                    	<a class="link-github btn btn-default disabled" href="/">In Progress...</a>
+                        <button type="button" class="close-btn btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+	            </div>
+	        </div>
+	  	</div>
+    </div>
+
+    <!-- Modal Project 5: Arcade Game -->
+	<div class="modal fade project-5-modal" tabindex="-1" role="dialog" aria-labelledby="project-5-modal">
+	  	<div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+	                <h4 class="modal-title" id="project-5-modal">Arcade Game</h4>
+	            </div>
+	            <div class="modal-box col-md-12 modal-body">
+                    <p>This is a future project in which an online arcade game will be developed as part of Udacity's Nanodegree program. OOP concept in JavaScript will be implemented along-with canvas creating in HTML.</p>
+                    <p>Stay tuned to find out more!</p>
+	            </div>
+	            <div class="modal-footer">
+                    <div class="col-md-12">
+                    	<a class="link-github btn btn-default disabled" href="/">Coming Soon...</a>
+                    	<button type="button" class="close-btn btn btn-default" data-dismiss="modal">Close</button>
+                    </div>  
+	            </div>
+	        </div>
+	  	</div>
+    </div>
+
+    <!-- Return to top functionality -->
+	<a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+    <!-- Javascript -->	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+
+	<!-- JS for return to top function -->
+	<script>
+		// ===== Scroll to Top ==== 
+		$(window).scroll(function() {
+		    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+		        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+		    } else {
+		        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+		    }
+		});
+		$('#return-to-top').click(function() {      // When arrow is clicked
+		    $('body,html').animate({
+		        scrollTop : 0                       // Scroll to top of body
+		    }, 250);
+		});
+	</script>
+
+	<!-- JS for auto-collapsing navbar -->
+	<script>
+		$('.navbar-collapse a').click(function(){
+	    $(".navbar-collapse").collapse('hide');
+	});
+	</script>
+
+	<!-- JS for smooth scrolling -->
+	<script>
+		$(document).ready(function(){
+
+	    /** 
+	     * This part does the "fixed navigation after scroll" functionality
+	     * We use the jQuery function scroll() to recalculate our variables as the 
+	     * page is scrolled/
+	     */
+	    $(window).scroll(function(){
+	        var window_top = $(window).scrollTop() + 12; // the "12" should equal the margin-top value for nav.stick
+	        var div_top = $('#nav-anchor').offset().top;
+	            if (window_top > div_top) {
+	                $('nav').addClass('stick');
+	            } else {
+	                $('nav').removeClass('stick');
+	            }
+	    });
+
+	    /**
+	     * This part causes smooth scrolling using scrollto.js
+	     * We target all a tags inside the nav, and apply the scrollto.js to it.
+	     */
+	    $("nav a").click(function(evn){
+	        evn.preventDefault();
+	        $('html,body').scrollTo(this.hash, this.hash); 
+	    });
+
+	    /**
+	     * This part handles the highlighting functionality.
+	     * We use the scroll functionality again, some array creation and 
+	     * manipulation, class adding and class removing, and conditional testing
+	     */
+	    var aChildren = $("nav li").children(); // find the a children of the list items
+	    var aArray = []; // create the empty aArray
+	    for (var i=0; i < aChildren.length; i++) {    
+	        var aChild = aChildren[i];
+	        var ahref = $(aChild).attr('href');
+	        aArray.push(ahref);
+	    } // this for loop fills the aArray with attribute href values
+
+	    $(window).scroll(function(){
+	        var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
+	        var windowHeight = $(window).height(); // get the height of the window
+	        var docHeight = $(document).height();
+
+	        for (var i=0; i < aArray.length; i++) {
+	            var theID = aArray[i];
+	            var divPos = $(theID).offset().top; // get the offset of the div from the top of page
+	            var divHeight = $(theID).height(); // get the height of the div in question
+	            if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
+	                $("a[href='" + theID + "']").addClass("nav-active");
+	            } else {
+	                $("a[href='" + theID + "']").removeClass("nav-active");
+	            }
+	        }
+
+	        if(windowPos + windowHeight == docHeight) {
+	            if (!$("nav li:last-child a").hasClass("nav-active")) {
+	                var navActiveCurrent = $(".nav-active").attr("href");
+	                $("a[href='" + navActiveCurrent + "']").removeClass("nav-active");
+	                $("nav li:last-child a").addClass("nav-active");
+	            }
+	        }
+	    });
+	});
+	</script>
+
+</body>
+</html>

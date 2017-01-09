@@ -1,0 +1,203 @@
+body {
+	font-family: "Questrial", sans-serif;
+	font-weight: 500;
+	font-size: 17px;
+	background-color: #383B38;
+	color: #F8F8F8;
+}
+
+h2 {
+	margin-top: 100px;
+	margin-bottom: 50px;
+}
+
+/* navbar styling */
+.navbar {
+	font-size: 15px;
+}
+
+.navbar-brand {
+	font-size: 20px;
+}
+
+/* social media formatting */
+.email {
+	color: #BFBBBB;
+}
+
+/* projects section styling */
+.ind-projects {
+	margin: 5px auto;
+	padding: 0.6em;
+}
+
+/*contact section styling */
+.contact-details {
+	padding-left: 10px;
+}
+
+.social-media-bottom {
+	display: block;
+	width: 100%;
+	padding: 0.5em;
+}
+
+/* footer section styling */
+.footer-inner {
+	border-top: 2px solid #b58f51;
+	font-size: 17px;
+	padding: 10px;
+	margin-top: 60px;
+}
+
+/* Change color of anchor and modal elements when hovered over them or clicked on them */
+a {
+	color: #BFBBBB;
+}
+
+a:hover {
+	color: #B0A98C;
+}
+
+a:focus {
+	color: #B0A98C;
+}
+
+.nohighlight:focus {
+    outline: none;  
+}
+
+/* modals styling */
+.modal-header {
+	background-color: #F8F8F8;
+	color: #777;
+}
+
+.modal-content {
+	background-color: #383B38;
+	color: #F8F8F8;
+	font-size: 15px;
+}
+
+.modal-footer {
+	border-style: none;
+}
+
+/* buttons styling */
+.close {
+	float: right;
+}
+
+.btn-default:focus {
+	outline: 0 !important;
+}
+
+.link-github {
+	float: left;
+}
+
+.send-btn {
+	float: left;
+}
+
+/* return to top style */
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+
+/* 3D box effect */
+.work-item {
+	display: inline-block;
+	background-color: transparent;
+	transition: all 0.3s ease-in-out;
+}
+
+.work-item::after {
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.work-item:hover {
+	transform: scale(1.1, 1.1);
+}
+
+.work-item:hover::after {
+ 	opacity: 1;
+}
+
+/* media queries for responsiveness */
+@media screen and (max-width: 992px) {
+	.social-media-top {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 680px) and (max-width: 991px) {
+	#projects {
+		max-width: 50%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 679px) {
+	.work-item {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 500px) {
+	.social-media-footer {
+		display: inline-flex;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	* {
+		font-size: 14px;
+	}
+}
