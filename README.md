@@ -17,7 +17,7 @@ index.html houses the html code that defines the basic structure of the website.
 - Components
   - Navs
   - Navbar
- - JavaScript components
+- JavaScript components
   - Component animations
   - Modal
   
