@@ -20,7 +20,7 @@ var bio = {
 		"technologies":
 			'AWS, SaaS, IaaS, PaaS, LTE, UMTS, GSM'
 	},
-	"biopic": "images/sid-400.png",
+	"biopic": "img/sid-400.png",
 };
 
 function displayBio() {
