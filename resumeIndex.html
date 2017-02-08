@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- This tells the browser how to read the document -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Siddharth Mistry Portfolio">
+    <meta name="author" content="Siddharth Mistry">
+    <meta name="keywords" content="junior front end web developer, front end web developer, front end web development, web design resume, web design, software developer, software engineer,
+    junior software developer, junior software engineer">
+    <!-- Page Title -->
+    <title>Siddharth Mistry Resume</title>
+    <!-- Icon in page title -->
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.ico">
+    <!-- CSS files -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/resume_style.min.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    <!-- fontawesome icons -->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+    <!-- script for Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-90856828-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- script tag for Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyD_nnzSI8xWTTjGYXIajtkmD3QnXrYWNdg"></script>
+</head>
+<body>
+    <!-- Body contains various sections: header, work exp, projects, education, map and contact info in footer.
+        Remaining divs are added using JavaScript. helper.js contains all the HTML elements to be added and resumebuilder.js
+        adds those elements dynamically in the DOM. -->
+    <div id="main" class="container-fluid">
+        <!-- This section contains biopic, contacts and skill set -->
+        <div id="header" class="center-content clear-fix row">
+            <div id="topContactsbiopic" class="row"></div>
+            <ul id="skills" class="col-xs-12 col-sm-12 col-md-12"></ul>
+        </div>
+        <div style="clear: both;"></div>
+        <!-- This section contains details about full-time work experince -->
+        <div id="workExperience" class="row">
+            <h2>Work Experience</h2>
+        </div>
+        <!-- This sections lists all the programming projects -->
+        <div id="projects" class="row">
+            <h2>Projects</h2>
+        </div>
+        <!-- This section contains all the schools attended and degrees achieved -->
+        <div id="education" class="row">
+            <h2>Education</h2>
+        </div>
+        <!-- This section contains map div -->
+        <div id="mapDiv" class="row">
+            <h2>Where I've Lived and Worked</h2>
+        </div>
+        <!-- This section contains contact info with links to Udacity profile, guthub profile and linkedin profile -->
+        <div id="lets-connect" class="row">
+            <h2 class="text-center connectHeader">Let's Connect</h2>
+            <footer class="container">
+                <aside class="text-center">
+                  © Siddharth Mistry 2016
+                </aside>
+                <ul class="list-unstyled list-inline text-center">
+                    <li class="social-media-footer email">
+                        <span><i class="fa fa-envelope fa-1.5x" aria-hidden="true"></i> mistry.siddharth@gmail.com</span>
+                    </li>
+                    <li class="social-media-footer udacity">
+                        <a href="https://profiles.udacity.com/u/siddharthmistry" target="_blank">
+                        <i class="fa fa-user fa-1.5x" aria-hidden="true"></i> Udacity Profile</a>
+                    </li>
+                    <li class="social-media-footer linkedin">
+                        <a href="https://www.linkedin.com/in/siddharth-mistry-7a660419" target="_blank">
+                        <i class="fa fa-linkedin-square fa-1.5x" aria-hidden="true"></i> LinkedIn</a>
+                    </li>
+                    <li class="social-media-footer github">
+                        <a href="https://github.com/mistry-siddharth" target="_blank">
+                        <i class="fa fa-github-square fa-1.5x" aria-hidden="true"></i> GitHub</a>
+                    </li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Return to top functionality HTML -->
+    <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+    <!-- Javascript --> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- jQuery for return to top function -->
+    <script>
+        // ===== Scroll to Top ==== 
+        $(window).scroll(function() {
+            if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+                $('#return-to-top').fadeIn(200);    // Fade in the arrow
+            } else {
+                $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+            }
+        });
+        $('#return-to-top').click(function() {      // When arrow is clicked
+            $('body,html').animate({
+                scrollTop : 0                       // Scroll to top of body
+            }, 250);
+        });
+    </script>
+
+    <!-- Adds different HTML tags in the HTML file from helper.js -->
+    <script src="js/helper.min.js"></script>
+    
+    <!--
+    The next line tells the browser to download resumeBuilder.js, which builds the resume
+    dynamically when this website, resumeIndex.html, is opened.
+    -->
+    <script src="js/resumeBuilder.min.js"></script>
+    <script>
+        if(document.getElementsByClassName('flex-item').length === 0) {
+          document.getElementById('topContacts').style.display = 'none';
+        }
+        if(document.getElementsByTagName('h1').length === 0) {
+          document.getElementById('header').style.display = 'none';
+        }
+        if(document.getElementsByClassName('work-entry').length === 0) {
+          document.getElementById('workExperience').style.display = 'none';
+        }
+        if(document.getElementsByClassName('project-entry').length === 0) {
+          document.getElementById('projects').style.display = 'none';
+        }
+        if(document.getElementsByClassName('education-entry').length === 0) {
+          document.getElementById('education').style.display = 'none';
+        }
+        if(document.getElementsByClassName('flex-item').length === 0) {
+          document.getElementById('lets-connect').style.display = 'none';
+        }
+        if(document.getElementById('map') === null) {
+          document.getElementById('mapDiv').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
