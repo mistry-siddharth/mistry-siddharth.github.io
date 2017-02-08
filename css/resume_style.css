@@ -1,223 +1,232 @@
-body,
-div,
-ul,
-li,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  padding:0;
-  margin:0;
-  font-family: "Roboto", sans-serif;
-}
-
-.clear-fix {
-  overflow: auto;
-}
-
-.education-entry,
-.work-entry,
-.project-entry {
+/* General styling */ 
+body {
+  font-family: "Questrial", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
   padding: 0 5%;
+  background-color: #383B38;
+  color: #F8F8F8;
 }
 
-h1 {
-  font-size: 40px;
-  color: #f5a623;
-  line-height: 48px;
-  display: inline;
+h1, h2, h3, h4 {
+  color: #FCF6B1;
 }
 
-h2 {
-  font-weight: bold;
-  font-size: 24px;
-  color: #999;
-  line-height: 29px;
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+a {
+  display: block;
+  color: #F8F8F8;
+}
+
+a:hover, a:focus {
+  color: #C5CCD3;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  padding: 1%;
+}
+
+/* Text colors */
+.blue-text {
+  color: #4ABDAC;
+}
+
+.yellow-text {
+  color: #FCF6B1; 
+}
+
+/* Thumbnail box styling */
+.thumbnail {
+  background-color: #575353;
+  border-radius: 0.5em;
+  padding: 10px 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Header styling */
+#header {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+hr {
+  margin-bottom: 1%;
+}
+
+#topContactsbiopic {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+/* styling for bio picture */
+.biopic {
+  border-radius: 0.5em;
+  margin-top: 20px;
+  float: left;
+}
+
+/* styling for top contacts */
+#topContacts {
+  float: left;
+  margin-top: 15px;
+}
+
+.aOverRide {
+  display: inline; /* to override anchor tag from displaying on a new line due to display:block; */
+}
+
+.contactItem {
   padding: 10px;
 }
 
-h3 {
-  font-style: italic;
-  font-size: 20px;
-  color: #000;
-  line-height: 22px;
+.flex-item {
+  display: block; /*to display each item in topContacts on a new line */
 }
 
-h4 {
-  font-weight: bold;
-  font-size: 14px;
-  color: #4a4a4a;
-  line-height: 17px;
+/* styling for skills section */
+.skillsList {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  display: block;
 }
 
-h2,
-h3,
-h4,
-h5 {
-  padding:10px 5%;
-
+/*Glyphicon styling*/
+.glyphicon {
+  margin: 5px;
 }
 
+/* Date and location text styling */
 .date-text {
   font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
+  color: #F2A541;
   float: left;
 }
 
 .location-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
   float: right;
 }
 
-p {
-  font-size: 14px;
-  color: #333;
-  line-height: 21px;
-}
-
-a {
-  color: #1199c3;
-  text-decoration: none;
-  margin-top: 10px;
-  display: block;
-}
-
-.welcome-message {
+/* Online education section styling */
+.onlineHeader {
   font-style: italic;
-  font-size: 18px;
-  color: #f3f3f3;
-  line-height: 28px;
 }
 
-#skills-h3 {
-  color: #f5ae23;
-  display: none;
-}
-
-.orange {
-  background-color: #f5ae23;
-}
-
-.orange-text {
-  color: #f5ae23;
-}
-
-.white-text {
-  font-weight: bold;
-  color: #fff;
-}
-
-.gray {
-  background-color: #f3f3f3;
-  padding-bottom: 10px;
-  clear:both;
-}
-
-.dark-gray {
-  background-color: #4a4a4a;
-}
-
-/* TODO: Replace with image later */
-#header {
-  background-color: #484848;
-}
-
-.flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  padding: 10px;
-}
-
-.center-content {
-  padding: 2.5% 5%;
-}
-
-li {
-  list-style-type: none;
-}
-
-ul {
-  list-style-type: none;
-}
-
-.biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
-  display: none;
-}
-
-img {
-  padding: 10px;
-}
-
-span {
-  padding: 5px;
-}
-
-#lets-connect {
-  text-align: center;
-}
-
-/* Media queries to handle various device widths */
-
-@media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
-  }
-}
-
-@media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
-  .welcome-message {
-    display: none;
-  }
+/* Map section styling */
+#mapDiv {
+  padding-bottom: 25px;
 }
 
 #map {
   display: block;
-  height: 100%;
-  margin: 0 5%;
-}
-
-#mapDiv {
   height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 1.5%;
 }
 
-@media only screen and (min-width: 750px) {
-  #skills-h3,
+/* Footer section styling */
+.connectHeader {
+  background-color: #4ABDAC;
+  padding: 10px;
+}
+
+.social-media-footer {
+  color: #F8F8F8;
+}
+
+/* return to top style */
+#return-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.7);
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-decoration: none;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  display: none;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+#return-to-top i {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  left: 16px;
+  top: 13px;
+  font-size: 19px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+#return-to-top:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+#return-to-top:hover i {
+  color: #fff;
+  top: 5px;
+}
+
+/* Media queries */
+@media screen and (max-width: 992px) {
+  #skills-h3 {
+    margin-top: 15px;
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 633px) {
   .biopic {
-    display: block;
+    float: none;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  #topContacts {
+    padding: 0;
+    float: none;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 442px) {
+  #map {
+    height: 200px;
+  }
+
+  #mapDiv {
+    padding-bottom: 15px;
+  }
+
+  .location-text {
+    float: left;
+  }
+
+  .skillsList {
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 15px;
   }
 }
