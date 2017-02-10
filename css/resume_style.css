@@ -8,6 +8,10 @@ body {
   color: #F8F8F8;
 }
 
+.pdf-resume {
+  float: right;
+}
+
 h1, h2, h3, h4 {
   color: #FCF6B1;
 }
@@ -60,7 +64,7 @@ hr {
   margin-bottom: 1%;
 }
 
-#topContactsbiopic {
+#top-contacts-biopic {
   margin-left: 25px;
   margin-right: 25px;
 }
@@ -73,25 +77,25 @@ hr {
 }
 
 /* styling for top contacts */
-#topContacts {
+#top-contacts {
   float: left;
   margin-top: 15px;
 }
 
-.aOverRide {
+.a-over-ride {
   display: inline; /* to override anchor tag from displaying on a new line due to display:block; */
 }
 
-.contactItem {
+.contact-item {
   padding: 10px;
 }
 
 .flex-item {
-  display: block; /*to display each item in topContacts on a new line */
+  display: block; /*to display each item in top-contacts on a new line */
 }
 
 /* styling for skills section */
-.skillsList {
+.skills-list {
   padding-top: 3px;
   padding-bottom: 3px;
   display: block;
@@ -114,12 +118,12 @@ hr {
 }
 
 /* Online education section styling */
-.onlineHeader {
+.online-header {
   font-style: italic;
 }
 
 /* Map section styling */
-#mapDiv {
+#map-div {
   padding-bottom: 25px;
 }
 
@@ -132,7 +136,7 @@ hr {
 }
 
 /* Footer section styling */
-.connectHeader {
+.connect-header {
   background-color: #4ABDAC;
   padding: 10px;
 }
@@ -200,7 +204,7 @@ hr {
     margin: 0 auto;
     margin-top: 20px;
   }
-  #topContacts {
+  #top-contacts {
     padding: 0;
     float: none;
     text-align: center;
@@ -208,21 +212,29 @@ hr {
 }
 
 @media screen and (max-width: 442px) {
-  #map {
-    height: 200px;
+  .container-fluid {
+    padding: 0;
   }
 
-  #mapDiv {
-    padding-bottom: 15px;
+  .social-media-footer {
+    display: list-item;
+  }
+
+  .skills-list {
+    margin-left: 15px;
   }
 
   .location-text {
     float: left;
   }
 
-  .skillsList {
-    margin-left: 15px;
+  #map {
+    height: 200px;
   }
+
+  #map-div {
+    padding-bottom: 15px;
+  }  
 }
 
 @media screen and (max-width: 768px) {
