@@ -41,12 +41,12 @@
     <div id="main" class="container-fluid">
         <!-- This section contains biopic, contacts and skill set -->
         <div id="header" class="center-content clear-fix row">
-            <div id="topContactsbiopic" class="row"></div>
+            <div id="top-contacts-biopic" class="row"></div>
             <ul id="skills" class="col-xs-12 col-sm-12 col-md-12"></ul>
         </div>
         <div style="clear: both;"></div>
         <!-- This section contains details about full-time work experince -->
-        <div id="workExperience" class="row">
+        <div id="work-experience" class="row">
             <h2>Work Experience</h2>
         </div>
         <!-- This sections lists all the programming projects -->
@@ -58,34 +58,12 @@
             <h2>Education</h2>
         </div>
         <!-- This section contains map div -->
-        <div id="mapDiv" class="row">
+        <div id="map-div" class="row">
             <h2>Where I've Lived and Worked</h2>
         </div>
         <!-- This section contains contact info with links to Udacity profile, guthub profile and linkedin profile -->
         <div id="lets-connect" class="row">
-            <h2 class="text-center connectHeader">Let's Connect</h2>
-            <footer class="container">
-                <aside class="text-center">
-                  © Siddharth Mistry 2016
-                </aside>
-                <ul class="list-unstyled list-inline text-center">
-                    <li class="social-media-footer email">
-                        <span><i class="fa fa-envelope fa-1.5x" aria-hidden="true"></i> mistry.siddharth@gmail.com</span>
-                    </li>
-                    <li class="social-media-footer udacity">
-                        <a href="https://profiles.udacity.com/u/siddharthmistry" target="_blank">
-                        <i class="fa fa-user fa-1.5x" aria-hidden="true"></i> Udacity Profile</a>
-                    </li>
-                    <li class="social-media-footer linkedin">
-                        <a href="https://www.linkedin.com/in/siddharth-mistry-7a660419" target="_blank">
-                        <i class="fa fa-linkedin-square fa-1.5x" aria-hidden="true"></i> LinkedIn</a>
-                    </li>
-                    <li class="social-media-footer github">
-                        <a href="https://github.com/mistry-siddharth" target="_blank">
-                        <i class="fa fa-github-square fa-1.5x" aria-hidden="true"></i> GitHub</a>
-                    </li>
-                </ul>
-            </footer>
+            <h2 class="text-center connect-header">Let's Connect</h2>
         </div>
     </div>
 
@@ -123,13 +101,13 @@
     <script src="js/resumeBuilder.min.js"></script>
     <script>
         if(document.getElementsByClassName('flex-item').length === 0) {
-          document.getElementById('topContacts').style.display = 'none';
+          document.getElementById('top-contacts').style.display = 'none';
         }
         if(document.getElementsByTagName('h1').length === 0) {
           document.getElementById('header').style.display = 'none';
         }
         if(document.getElementsByClassName('work-entry').length === 0) {
-          document.getElementById('workExperience').style.display = 'none';
+          document.getElementById('work-experience').style.display = 'none';
         }
         if(document.getElementsByClassName('project-entry').length === 0) {
           document.getElementById('projects').style.display = 'none';
@@ -141,7 +119,7 @@
           document.getElementById('lets-connect').style.display = 'none';
         }
         if(document.getElementById('map') === null) {
-          document.getElementById('mapDiv').style.display = 'none';
+          document.getElementById('map-div').style.display = 'none';
         }
     </script>
 </body>
