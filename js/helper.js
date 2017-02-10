@@ -10,24 +10,24 @@ var HTMLheaderRole = '<p class="yellow-text">%data%</p><hr>';
 //Bio pic tag
 var HTMLbioPic = '<img src="%data%" class="biopic img-responsive">';
 //Top Contacts
-var HTMLTopContacts = '<ul id="topContacts" class="flex-box"></ul>';
-var HTMLmobile = '<li class="flex-item contactItem"><span class="blue-text">mobile </span><span>%data%</span></li>';
-var HTMLemail = '<li class="flex-item contactItem"><span class="blue-text">email </span><span>%data%</span></li>';
-var HTMLgithub = '<li class="flex-item contactItem"><span class="blue-text">github </span><a href="https://github.com/mistry-siddharth" class="aOverRide" target="_blank"><span>%data%</span></a></li>';
-var HTMLlocation = '<li class="flex-item contactItem"><span class="blue-text">location </span><span>%data%</span></li>';
+var HTMLTopContacts = '<ul id="top-contacts" class="flex-box"></ul>';
+var HTMLmobile = '<li class="flex-item contact-item"><span class="blue-text">mobile </span><span>%data%</span></li>';
+var HTMLemail = '<li class="flex-item contact-item"><span class="blue-text">email </span><span>%data%</span></li>';
+var HTMLgithub = '<li class="flex-item contact-item"><span class="blue-text">github </span><a href="https://github.com/mistry-siddharth" class="a-over-ride" target="_blank"><span>%data%</span></a></li>';
+var HTMLlocation = '<li class="flex-item contact-item"><span class="blue-text">location </span><span>%data%</span></li>';
 //Skills elements
 var HTMLskillsStart = '<div class="skills-entry"></div>';
 var HTMLskillsHeader = '<h3 id="skills-h3">Skills at a Glance</h3>';
-var HTMLprogramming = '<li class="skillsList"><span class="blue-text">Programming Languages: </span><span>%data%</span></li>';
-var HTMLTools = '<li class="skillsList"><span class="blue-text">Tools: </span><span>%data%</span></li>';
-var HTMLTechnology = '<li class="skillsList"><span class="blue-text">Technologies: </span><span>%data%</span></li>';
+var HTMLprogramming = '<li class="skills-list"><span class="blue-text">Programming Languages: </span><span>%data%</span></li>';
+var HTMLtools = '<li class="skills-list"><span class="blue-text">Tools: </span><span>%data%</span></li>';
+var HTMLtechnology = '<li class="skills-list"><span class="blue-text">Technologies: </span><span>%data%</span></li>';
 
 //Work elements
 var HTMLworkStart = '<div class="work-entry col-md-12"></div>';
 var HTMLworkEmployer = '<a class="blue-text"><b>%data%';
 var HTMLworkTitle = ' - %data%</a>';
 var HTMLworkDates = '<div class="date-text"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>%data%</div>';
-var HTMLworkLocation = '<div class="location-text">%data%</div>';
+var HTMLworkLocation = '<div class="location-text"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
 //Project elements
@@ -35,7 +35,6 @@ var HTMLprojectStart = '<div class="project-entry col-md-12"></div>';
 var HTMLprojectTitle = '<a class="blue-text"><b>%data%</a>';
 var HTMLprojectDates = '<div class="date-text"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
 
 //Education elements
 var HTMLschoolStart = '<div class="education-entry col-xs-12 col-md-6"></div>';
@@ -53,6 +52,14 @@ var HTMLonlineDegree = ' -- %data%</a>';
 var HTMLonlineDates = '<div class="date-text"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>%data%</div>';
 var HTMLonlineMajor = '<em><br><br>Major: %data%</em>';
 
+//footer contacts
+var HTMLcopyright = '<aside class="text-center">© Siddharth Mistry 2016</aside>';
+var HTMLfooterContacts = '<ul id="footerContacts" class="list-unstyled text-center"></ul>';
+var HTMLfooteremail = '<li class="social-media-footer email"><span><i class="fa fa-envelope fa-1.5x" aria-hidden="true"></i> mistry.siddharth@gmail.com</span></li>';
+var HTMLfooterUdacity = '<li class="social-media-footer udacity"><a href="https://profiles.udacity.com/u/siddharthmistry" target="_blank"><i class="fa fa-user fa-1.5x" aria-hidden="true"></i> Udacity Profile</a></li>';
+var HTMLfooterlinkedin = '<li class="social-media-footer linkedin"><a href="https://www.linkedin.com/in/siddharth-mistry-7a660419" target="_blank"><i class="fa fa-linkedin-square fa-1.5x" aria-hidden="true"></i> LinkedIn</a></li>';
+var HTMLfootergithub = '<li class="social-media-footer github"><a href="https://github.com/mistry-siddharth" target="_blank"><i class="fa fa-github-square fa-1.5x" aria-hidden="true"></i> GitHub</a></li>';
+
 //Google Maps tag
 var googleMap = '<div id="map"></div>';
 
@@ -60,14 +67,14 @@ var googleMap = '<div id="map"></div>';
 The Internationalize Names challenge found in the lesson Flow Control from JavaScript Basics requires
 you to create a function that will need this helper code to run. Don't delete!
 It hooks up your code to the button you'll be appending.
-*/
+
 $(document).ready(function() {
     $('button').click(function() {
         var $name = $('#name');
         var iName = inName($name.text()) || function() {};
         $name.html(iName);
     });
-});
+});*/
 
 /*
 The next few lines about clicks are for the Collecting Click Locations quiz in the lesson Flow Control from JavaScript Basics.
@@ -107,7 +114,7 @@ function initializeMap() {
 
     /*
     For the map to be displayed, the googleMap var must be
-    appended to #mapDiv in resumeBuilder.js.
+    appended to #map-div in resumeBuilder.js.
     */
     map = new google.maps.Map(document.querySelector('#map'), mapOptions);
 
