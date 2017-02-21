@@ -104,7 +104,7 @@ work.display();
 var projects = {
     "projects": [{
             "title": "Online Portfolio and Resume",
-            "dates": "December 2016",
+            "dates": "December 2016 - February 2017",
             "description": "<br>• Designed an online portfolio and resume using HTML, CSS, Bootstrap, JavaScript and jQuery" +
                 "<br>• Implemented concepts of responsive web design and responsive images for optimizing site for different screen sizes"
         },
