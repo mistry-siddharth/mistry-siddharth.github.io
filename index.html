@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siddharth Mistry | Sr. Technical Product Manager | Payment & Platform Expert</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Work+Sans:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #1a1a1a;
+            --accent: #d4773c;
+            --accent-soft: #e89968;
+            --teal: #2d7d7a;
+            --teal-light: #4ca9a4;
+            --earth: #8b6f47;
+            --text: #2a2a2a;
+            --text-light: #6a6a6a;
+            --bg: #fdfbf7;
+            --surface: #ffffff;
+            --warm-bg: #fff8f0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Work Sans', -apple-system, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.65;
+            overflow-x: hidden;
+        }
+        
+        /* Organic background texture */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 15% 25%, rgba(212, 119, 60, 0.08) 0%, transparent 25%),
+                radial-gradient(circle at 85% 75%, rgba(45, 125, 122, 0.06) 0%, transparent 30%),
+                radial-gradient(circle at 50% 50%, rgba(139, 111, 71, 0.04) 0%, transparent 40%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        /* Decorative elements */
+        body::after {
+            content: '';
+            position: fixed;
+            top: -200px;
+            right: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212, 119, 60, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 25s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(-50px, 50px) scale(1.05); }
+            66% { transform: translate(50px, -30px) scale(0.95); }
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Hero section */
+        header {
+            padding: 5rem 0 4rem;
+            position: relative;
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .name {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 600;
+            color: var(--primary);
+            letter-spacing: -0.03em;
+            line-height: 1;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.2s forwards;
+        }
+        
+        .name-accent {
+            color: var(--accent);
+            font-style: italic;
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            color: var(--teal);
+            font-weight: 500;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.3s forwards;
+        }
+        
+        .intro-text {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            max-width: 650px;
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.4s forwards;
+        }
+        
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.5s forwards;
+        }
+        
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            background: rgba(212, 119, 60, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .contact-link:hover {
+            background: var(--accent);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 119, 60, 0.2);
+        }
+        
+        .contact-link svg {
+            width: 18px;
+            height: 18px;
+        }
+        
+        /* Stats cards */
+        .stats-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.6s forwards;
+        }
+        
+        .stat-card {
+            background: var(--surface);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateX(8px);
+        }
+        
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1;
+        }
+        
+        .stat-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+        
+        /* Section styling */
+        section {
+            margin-bottom: 6rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+        
+        section:nth-of-type(1) { animation-delay: 0.7s; }
+        section:nth-of-type(2) { animation-delay: 0.8s; }
+        section:nth-of-type(3) { animation-delay: 0.9s; }
+        section:nth-of-type(4) { animation-delay: 1s; }
+        
+        .section-header {
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 6rem;
+            font-weight: 700;
+            color: rgba(212, 119, 60, 0.1);
+            position: absolute;
+            top: -2rem;
+            left: -1rem;
+            z-index: -1;
+            line-height: 1;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+        
+        /* Experience cards - new paragraph style */
+        .experience-grid {
+            display: grid;
+            gap: 3rem;
+        }
+        
+        .experience-card {
+            background: var(--surface);
+            padding: 2.5rem;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+        }
+        
+        .experience-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--accent), var(--teal));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+        
+        .experience-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .experience-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+        }
+        
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1.5rem;
+            gap: 2rem;
+        }
+        
+        .company-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+        
+        .date-badge {
+            background: var(--warm-bg);
+            color: var(--earth);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            white-space: nowrap;
+            border: 1px solid rgba(139, 111, 71, 0.2);
+        }
+        
+        .role-title {
+            font-size: 1.2rem;
+            color: var(--teal);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .exp-description {
+            color: var(--text);
+            line-height: 1.9;
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .exp-description strong {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .exp-description em {
+            color: var(--teal);
+            font-style: normal;
+            font-weight: 600;
+        }
+        
+        .impact-highlight {
+            background: linear-gradient(135deg, rgba(45, 125, 122, 0.08), rgba(212, 119, 60, 0.08));
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 3px solid var(--teal);
+            margin-top: 1rem;
+        }
+        
+        .impact-highlight p {
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+        
+        /* Skills section - visual tags */
+        .skills-showcase {
+            display: grid;
+            gap: 2.5rem;
+        }
+        
+        .skill-category {
+            background: linear-gradient(135deg, var(--warm-bg), var(--surface));
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(212, 119, 60, 0.15);
+        }
+        
+        .skill-category h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .skill-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        
+        .skill-tag {
+            background: white;
+            color: var(--text);
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border: 2px solid var(--accent);
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+        
+        .skill-tag:hover {
+            background: var(--accent);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 119, 60, 0.3);
+        }
+        
+        /* Projects section - featured style */
+        .project-featured {
+            background: linear-gradient(135deg, var(--teal), var(--teal-light));
+            padding: 3rem;
+            border-radius: 20px;
+            color: white;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-featured::before {
+            content: '🏆';
+            position: absolute;
+            top: -1rem;
+            right: 2rem;
+            font-size: 8rem;
+            opacity: 0.15;
+        }
+        
+        .project-featured h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project-featured p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+        
+        .achievement-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            padding: 0.8rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .cert-card {
+            background: var(--surface);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 2px solid var(--warm-bg);
+            transition: all 0.3s ease;
+        }
+        
+        .cert-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(212, 119, 60, 0.15);
+        }
+        
+        .cert-badge {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        .cert-card h4 {
+            font-size: 1.15rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .cert-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        
+        /* Education section */
+        .education-grid {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .education-card {
+            background: var(--surface);
+            padding: 2.5rem;
+            border-radius: 16px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2rem;
+            align-items: start;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .education-card:hover {
+            border-color: var(--teal);
+            transform: translateX(8px);
+        }
+        
+        .degree-badge {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-light));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .degree-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .degree-school {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .degree-year {
+            color: var(--earth);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .degree-honors {
+            color: var(--teal);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            font-style: italic;
+        }
+        
+        /* About section */
+        .about-content {
+            background: linear-gradient(135deg, rgba(212, 119, 60, 0.05), rgba(45, 125, 122, 0.05));
+            padding: 3rem;
+            border-radius: 20px;
+            max-width: 900px;
+            border: 2px solid rgba(212, 119, 60, 0.1);
+        }
+        
+        .about-content p {
+            color: var(--text);
+            line-height: 1.9;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-content p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .passion-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(212, 119, 60, 0.2);
+        }
+        
+        .passion-tag {
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text);
+            border: 1px solid var(--accent);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-stack {
+                grid-template-columns: 1fr;
+            }
+            
+            .exp-header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .education-card {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-number {
+                font-size: 4rem;
+            }
+            
+            .contact-grid {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="hero-grid">
+                <div>
+                    <h1 class="name">Siddharth <span class="name-accent">Mistry</span></h1>
+                    <p class="tagline">Technical Product Leader & Payment Innovator</p>
+                    <p class="intro-text">
+                        Transforming complex technical challenges into elegant product solutions. 
+                        Specializing in scaled payment platforms, backend-integrated systems, and 
+                        data-driven strategies that drive measurable business impact.
+                    </p>
+                    <div class="contact-grid">
+                        <a href="mailto:mistry.siddharth@gmail.com" class="contact-link">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+                            Email
+                        </a>
+                        <a href="https://www.linkedin.com/in/sid-mistry/" target="_blank" class="contact-link">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/></svg>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/mistry-siddharth" target="_blank" class="contact-link">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"/></svg>
+                            GitHub
+                        </a>
+                        <div class="contact-link">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                            Seattle, WA
+                        </div>
+                    </div>
+                </div>
+                <div class="stats-stack">
+                    <div class="stat-card">
+                        <div class="stat-number">6+</div>
+                        <div class="stat-label">Years in Product</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">$900B+</div>
+                        <div class="stat-label">Managed Annually</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">1M+</div>
+                        <div class="stat-label">Customers Impacted</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="experience">
+            <div class="section-header">
+                <div class="section-number">01</div>
+                <h2 class="section-title">Experience</h2>
+                <p class="section-subtitle">Building products that scale and deliver</p>
+            </div>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div>
+                            <h3 class="company-name">Amazon</h3>
+                            <div class="role-title">Sr. Product Manager – Technical, Disbursements</div>
+                        </div>
+                        <div class="date-badge">Mar 2024 - Oct 2025</div>
+                    </div>
+                    <div class="exp-description">
+                        <p><strong>Orchestrated</strong> the strategic evolution of Amazon's disbursement platform, <em>driving platform capabilities</em> to scale for instant payments across global marketplaces. <strong>Spearheaded</strong> comprehensive data validation systems that <em>reduced rejected disbursements by 20%</em>, eliminating 330K failed transactions annually while simultaneously minimizing compliance risks. <strong>Partnered</strong> intensively with backend engineering teams to <em>architect product integration requirements</em> with external banking partners, defining API contracts, data flows, error-handling scenarios, and performance indicators that enhanced operational efficiency and platform reliability.</p>
+                    </div>
+                    <div class="impact-highlight">
+                        <p><strong>Navigated</strong> critical business continuity challenges by <em>enabling a backup banking partner integration</em>, securing $17B in UK disbursements across 6M transactions. <strong>Led</strong> cross-functional execution with Risk & Compliance, Legal, Treasury, Product Management, and Engineering, making data-driven trade-offs between feature scope, compliance risk, and delivery timelines. <strong>Translated</strong> ambitious business goals into a comprehensive 3-year product vision for instant payments spanning 12 Amazon marketplaces, conducting extensive market research across 25 regions, analyzing competitive trends, and evaluating banking partnerships to enhance disbursement experience for 1M+ sellers and vendors. <strong>Championed</strong> metric precision by improving Disbursement Success Rate accuracy by 36 basis points for $900B+ in annual disbursements through advanced SQL data analysis.</p>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div>
+                            <h3 class="company-name">AutoNote</h3>
+                            <div class="role-title">Co-Founder & Product Manager</div>
+                        </div>
+                        <div class="date-badge">Jan 2023 - May 2023</div>
+                    </div>
+                    <div class="exp-description">
+                        <p><strong>Co-founded</strong> and <em>led end-to-end product development</em> of an AI-powered note-taking web application, building a lean cross-functional team including lead engineer, two backend engineers, and UI/UX designer. <strong>Authored</strong> engineering-ready technical specifications detailing user flows, speech-to-text integration, AI-assisted autocomplete behavior, data architecture, and comprehensive edge case handling that <em>improved note-taking speed by 50%+</em>. <strong>Defined</strong> product requirements and user stories informed by targeted demographic surveys and customer research.</p>
+                    </div>
+                    <div class="impact-highlight">
+                        <p><strong>Executed</strong> comprehensive go-to-market strategy encompassing competitive analysis, financial modeling, and pitch development. <strong>Secured</strong> 1st place recognition among 8 competitive teams, delivering live product demonstration to 13 venture capitalists at Pioneer Square Labs, advancing to the Dempsey Startup Competition finals, and engaging with Trilogy Partners for potential investment opportunities.</p>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div>
+                            <h3 class="company-name">Allay Health</h3>
+                            <div class="role-title">Venture Fellow</div>
+                        </div>
+                        <div class="date-badge">Nov 2022 - Mar 2023</div>
+                    </div>
+                    <div class="exp-description">
+                        <p><strong>Specialized</strong> in healthcare technology product management, <em>driving successful product launches</em> and strategic pricing initiatives within the digital health sector. <strong>Identified</strong> emerging market trends and <em>optimized resource allocation</em> while forging strategic partnerships that positioned the company for accelerated growth. <strong>Developed</strong> user-centric messaging frameworks and delivered tangible results focused on healthcare innovation and patient experience improvement.</p>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div>
+                            <h3 class="company-name">Amazon</h3>
+                            <div class="role-title">Sr. Product Manager – Technical Intern, Consumer Payments</div>
+                        </div>
+                        <div class="date-badge">Jun 2022 - Sep 2022</div>
+                    </div>
+                    <div class="exp-description">
+                        <p><strong>Enabled</strong> <em>$2B in incremental revenue</em> by designing and implementing an incentive-based payment recommendation engine integrated into Amazon.com's checkout flow, expanding customer access to $10B in annual savings opportunities. <strong>Influenced</strong> backend engineering and machine learning teams to <em>optimize system architecture</em>, reducing checkout completion time by 23% (from 52s to 40s) for 400M Amazon.com customers. <strong>Analyzed</strong> industry trends and competitive dynamics to contribute strategic insights to the consumer payments roadmap.</p>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div>
+                            <h3 class="company-name">Microsoft</h3>
+                            <div class="role-title">MBA Consultant, Product Strategy</div>
+                        </div>
+                        <div class="date-badge">Jan 2022 - Jun 2022</div>
+                    </div>
+                    <div class="exp-description">
+                        <p><strong>Developed</strong> comprehensive product growth strategy for Microsoft Power Platform in the low-code/no-code market segment through rigorous competitive analysis, market research, and product capability evaluation. <strong>Conducted</strong> targeted customer interviews and stakeholder surveys to <em>assess platform strengths and capability gaps</em>, delivering actionable recommendations focused on enhancing Power Platform adoption in higher education through differentiated features and improved user experience.</p>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div>
+                            <h3 class="company-name">Viasat</h3>
+                            <div class="role-title">Customer Reliability Engineer</div>
+                        </div>
+                        <div class="date-badge">Apr 2019 - Jul 2021</div>
+                    </div>
+                    <div class="exp-description">
+                        <p><strong>Managed</strong> Wi-Fi reliability operations for four major airline partners, <em>driving operational excellence</em> and enhancing customer experiences at scale. <strong>Delivered</strong> $2.5M in annual contractual cost savings by developing predictive alerting programs that identified outage indicators before service degradation. <strong>Enhanced</strong> user experience for 8.8M annual customers by <em>improving in-flight Wi-Fi availability by 4%</em> (from 93% to 97%) across 5K+ daily flights through systematic root-cause analysis and proactive issue resolution. <strong>Optimized</strong> traffic flow patterns for a major airline partner, increasing Wi-Fi capacity by 87% and driving customer satisfaction scores up by 73%.</p>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div>
+                            <h3 class="company-name">Teleworld Solutions</h3>
+                            <div class="role-title">Radio Frequency Engineer II</div>
+                        </div>
+                        <div class="date-badge">Jun 2014 - Apr 2019</div>
+                    </div>
+                    <div class="exp-description">
+                        <p><strong>Led</strong> telecom network enhancements and optimization initiatives that <em>drove measurable customer experience improvements</em> and revenue growth. <strong>Achieved</strong> an 80% improvement in Comcast's public Wi-Fi reliability, securing lucrative new contracts that increased the firm's annual revenue by 25% (from $28M to $35M). <strong>Reduced</strong> call drop rates by 30% during high-traffic NASCAR events (2017-2018), enhancing network reliability for thousands of concurrent users through strategic traffic management optimization at scale.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="section-header">
+                <div class="section-number">02</div>
+                <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-subtitle">Technical depth meets strategic vision</p>
+            </div>
+            <div class="skills-showcase">
+                <div class="skill-category">
+                    <h3><span class="skill-icon">🎯</span> Product Leadership</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Product Strategy</span>
+                        <span class="skill-tag">Roadmap Planning</span>
+                        <span class="skill-tag">Stakeholder Management</span>
+                        <span class="skill-tag">Cross-functional Leadership</span>
+                        <span class="skill-tag">User Research</span>
+                        <span class="skill-tag">Go-to-Market Strategy</span>
+                        <span class="skill-tag">Competitive Analysis</span>
+                        <span class="skill-tag">OKR Development</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><span class="skill-icon">⚙️</span> Technical & Engineering</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">API Design & Integration</span>
+                        <span class="skill-tag">System Architecture</span>
+                        <span class="skill-tag">Technical Specifications</span>
+                        <span class="skill-tag">Backend Integration</span>
+                        <span class="skill-tag">SQL & Data Analysis</span>
+                        <span class="skill-tag">Platform Engineering</span>
+                        <span class="skill-tag">Performance Optimization</span>
+                        <span class="skill-tag">DevOps Understanding</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><span class="skill-icon">💳</span> Domain Expertise</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Payment Platforms</span>
+                        <span class="skill-tag">Fintech Products</span>
+                        <span class="skill-tag">E-commerce Solutions</span>
+                        <span class="skill-tag">Compliance & Risk</span>
+                        <span class="skill-tag">Platform Reliability</span>
+                        <span class="skill-tag">Banking Integration</span>
+                        <span class="skill-tag">AI/ML Applications</span>
+                        <span class="skill-tag">Healthcare Technology</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="section-header">
+                <div class="section-number">03</div>
+                <h2 class="section-title">Projects & Recognition</h2>
+                <p class="section-subtitle">Innovation and continuous learning</p>
+            </div>
+            
+            <div class="project-featured">
+                <h3>AutoNote – AI Note-Taking Application</h3>
+                <p>Conceived and developed an award-winning AI-driven note-taking application featuring real-time contextual suggestions that revolutionized note organization. Architected comprehensive business model including financial projections and 5-year strategic growth plan. Successfully presented innovative concept to 13 Seattle-based venture capitalists.</p>
+                <div class="achievement-badge">🏆 1st Place – Pioneer Square Labs | Advanced to Dempsey Startup Competition</div>
+            </div>
+
+            <div class="certs-grid">
+                <div class="cert-card">
+                    <div class="cert-badge">🎓</div>
+                    <h4>Microsoft Certified: Azure AI Fundamentals</h4>
+                    <p>Microsoft • December 2021</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-badge">💻</div>
+                    <h4>Nanodegree in Front-end Web Development</h4>
+                    <p>Udacity • October 2017</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <div class="section-header">
+                <div class="section-number">04</div>
+                <h2 class="section-title">Education</h2>
+                <p class="section-subtitle">Academic foundation for product excellence</p>
+            </div>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="degree-badge">MBA</div>
+                    <div class="degree-content">
+                        <h3>Master of Business Administration</h3>
+                        <p class="degree-school">University of Washington – Michael G. Foster School of Business</p>
+                        <p class="degree-year">September 2021 - June 2023</p>
+                        <p class="degree-honors">Dean's Merit Fellow • Board Fellow, Helping Link • Student, Creative Destruction Lab • Member: Foster Technology Club, Data and Analytics Club</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="degree-badge">MS</div>
+                    <div class="degree-content">
+                        <h3>Master of Science in Telecommunications Engineering</h3>
+                        <p class="degree-school">University of Maryland, College Park</p>
+                        <p class="degree-year">2012 - 2014</p>
+                        <p class="degree-honors">Vice President: Telecommunications Students and Alumni Network (TSAN) • Volunteer: Students Council of India • Student Library Assistant • Assistant to Director, UMD Robotics Center</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="degree-badge">BE</div>
+                    <div class="degree-content">
+                        <h3>Bachelor of Engineering in Electronics and Communications</h3>
+                        <p class="degree-school">Gujarat University, Ahmedabad, India</p>
+                        <p class="degree-year">Completed 2012</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="section-header">
+                <div class="section-number">05</div>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Beyond the product roadmap</p>
+            </div>
+            <div class="about-content">
+                <p>I'm a passionate and driven technical product leader with a unique journey from wireless engineering to payment platform innovation. My career has been defined by a relentless focus on creating positive impact, embracing complex challenges, and improving lives by connecting people through technology and data-driven insights.</p>
+                
+                <p>As a collaborative and empathetic leader, I thrive in cross-functional environments where influencing without authority and building authentic relationships are essential to success. I'm a lifelong learner with deep passion for data analysis, systematic problem-solving, and unwavering customer-centric approaches.</p>
+                
+                <p>After 7+ years building technical expertise in engineering, I recognized the transformative value of business acumen and pursued my MBA at Foster School of Business. This strategic pivot strengthened my product management, marketing, and strategy capabilities, positioning me to bridge the gap between technical complexity and business impact.</p>
+                
+                <p>When I'm not orchestrating product launches or analyzing payment flows, you'll find me capturing moments through photography, exploring new hiking trails, competing in ultimate frisbee, experimenting with new recipes in the kitchen, or planning my next travel adventure.</p>
+                
+                <div class="passion-tags">
+                    <span class="passion-tag">📸 Photography</span>
+                    <span class="passion-tag">🥏 Ultimate Frisbee</span>
+                    <span class="passion-tag">🥾 Hiking</span>
+                    <span class="passion-tag">🍳 Cooking</span>
+                    <span class="passion-tag">✈️ Travel</span>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
